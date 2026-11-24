@@ -15,7 +15,7 @@ function dockIds() {
   apps.forEach(function (a) {
     by[a.id] = a;
   });
-  var ids = cfg.dock && cfg.dock.length ? cfg.dock : DEFAULTS.dock;
+var ids = cfg.dock != null ? cfg.dock : DEFAULTS.dock;
   return ids
     .filter(function (i) {
       return by[i] && !isHidden(i);
